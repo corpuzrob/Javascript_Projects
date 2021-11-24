@@ -1,5 +1,5 @@
-# Javascript_Projects
-Javascript Projects
+# JavaScript_Projects
+JavaScript Projects
 
 This is a display of sample projects that I created using Javascript.
 
