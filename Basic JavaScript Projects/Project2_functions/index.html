@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Team Colors</title>
+        <meta charset="utf-8">
+        <script src="JS/main.js"></script>
+    </head>
+    <body>
+
+        <!-- The following div creates a p element that calls a function when the user mouses over it -->
+        <div class="container">
+            <div>
+                <h1>Team Colors</h1>
+            </div>
+
+            <div>
+                <p onmouseover="Team_Color1()" id="Color1">
+                    Hover to see the first color.
+                </p>
+            </div>
+
+            <!-- I originally meant to use the next two divs to create a 2nd p element and a 2nd button but when I couldn't get everything to work at once I decided to keep it simple -->
+            <!-- <div>
+                <p onmouseover="Team_Color2()" id="Color1">
+                    Hover to see the second color again.
+                </p>
+            </div>
+
+            <div class="squares">
+
+                <button onclick="Team_Color1()" id="Color1">
+                    First color
+                </button>
+            </div> -->
+
+            <!-- The following div creates a button that calls a function when the clicks it -->
+
+            <div class="squares">
+                <button onclick="Team_Color2()" id="Color2">
+                    Click to see the second color
+                </button>
+            </div>
+
+            <!-- This div calls a function to concatenate two strings together -->
+            <div class="squares">
+                <p id = "Concatenate" onclick = "myFunction()">Click here!</p>
+            </div>
+        </div>
+
+    </body>
+</html>

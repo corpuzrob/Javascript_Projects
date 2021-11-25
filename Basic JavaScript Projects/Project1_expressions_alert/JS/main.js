@@ -42,3 +42,4 @@ function My_First_Function()    { // Example of a function
     var result = str.fontcolor("blue");
     document.getElementById("Blue_Text").innerHTML = result;
 }
+
