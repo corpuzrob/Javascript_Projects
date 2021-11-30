@@ -1,4 +1,3 @@
-//I'm hoping it's ok that I don't add comments on everything since I'm already using document.write statements to explain what's happening.
 
 function statements()   {
     //Displays type: string
