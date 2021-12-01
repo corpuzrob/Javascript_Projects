@@ -24,7 +24,7 @@ function Drink_Function()    {
 // class Customer  {
 //     string FullName;
 //     Boolean Active;
-//     Customer(string name)   {
+//     Customer(string name)   {                    
 //         Fullname = name;
 //         Active = true;
 //     }
