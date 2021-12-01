@@ -1,3 +1,5 @@
+// The following are example nested functions
+
 function count_Function()   {
     document.getElementById("Counting").innerHTML = Count();
     function Count()    {
@@ -22,7 +24,6 @@ function nest_Function2()   {
     document.getElementById("Nested_Function2").innerHTML = Scales();
     function Scales()    {
         var left_Scale = 15; var right_Scale = 14;
-        function Minus_two() {Starting_point -= 2;}
         if (left_Scale > right_Scale)   {
             document.write("The left scale is heavier.");
         }   else if (left_Scale < right_Scale)   {

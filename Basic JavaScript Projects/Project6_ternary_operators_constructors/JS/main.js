@@ -1,3 +1,4 @@
+// This next three functions use ternary operations
 function Ride_Function()    {
     var Height, Can_ride;
     Height = document.getElementById("Height").value;
@@ -31,6 +32,7 @@ function Drink_Function()    {
 
 // Customer cust = new Customer("Brenda Smith");
 
+// The following functions use object constructors [Vehicle() and Customer()] and keywords (Jack, Emily, Ted, Barney, etc.)
 function Vehicle(Make, Model, Year, Color)  {
     this.Vehicle_Make = Make;
     this.Vehicle_Model = Model;
