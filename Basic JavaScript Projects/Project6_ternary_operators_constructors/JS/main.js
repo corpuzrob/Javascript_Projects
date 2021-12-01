@@ -1,4 +1,4 @@
-// This next three functions use ternary operations
+// The next three functions use ternary operations using browser input
 function Ride_Function()    {
     var Height, Can_ride;
     Height = document.getElementById("Height").value;
