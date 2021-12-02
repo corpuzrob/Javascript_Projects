@@ -13,6 +13,8 @@
                 <h1>JavaScript Scope Time Function</h1>
             </div>
 
+            <p id="Greeting" onclick="get_Date()">Click here.</p>
+
             <div class="squares">
                 <p>Will someone who makes less than $400,000 have their taxes increased under President Biden's plan?</p>
                 <!-- <input id="Test_Income" value="400000" /> -->
@@ -21,15 +23,20 @@
             </div>
 
             <div class="squares">
-                <p>Will your taxes be increased under President Biden's plan?</p>
-                <input id="User_Income" value="400000" />
-                <button onclick="Tax_Bracket_Function()">Enter your income (no punctuation):</button>
+                <p>Will your taxes be increased under President Biden's plan? &nbsp; Enter your income below in USD (no punctuation):</p>
+                <input id="User_Income" value="" />
+                <button onclick="Tax_Bracket_Function()">Submit</button>
                 <p id="Tax_Bracket_Status"></p>
             </div>
 
             <div class="squares">
-                <p id="Greeting" onclick="get_Date()">Click here.</p>
+                <p>Enter your birth month below to see what you should know about your zodiac sign:</p>
+                <input id="User_Birth_Month" value="" />
+                <button onclick="Horoscope()">Submit</button>
+                <p id="User_Zodiac"></p>
             </div>
+
+           
 
         </div>
 

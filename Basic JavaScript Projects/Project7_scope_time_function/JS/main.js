@@ -15,11 +15,62 @@ function Tax_Bracket_Function() {
     document.getElementById("Tax_Bracket_Status").innerHTML = "At an income of $" + User_Income + ", " + Tax_Bracket;
 }
 
-function get_Date() {
-    if (new Date().getHours() < 18) {
-        document.getElementById("Greeting").innerHTML = "How are you today?";
+function Horoscope() {
+
+    var User_Birth_Month = document.getElementById("User_Birth_Month").value.toLowerCase();
+    if (User_Birth_Month == "january")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
     }
-    if (new Date().getHours() >= 18) {
-        document.getElementById("Greeting").innerHTML = "How are you this evening?";
+
+    else if (User_Birth_Month == "february")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "march")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "april")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "may")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "june")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "july")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "august")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "september")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "october")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "november")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else if (User_Birth_Month == "december")   {
+        document.getElementById("User_Zodiac").innerHTML = "As someone born in " + capitalize(User_Birth_Month) + ", your zodiac sign is a waste of time, since horoscopes are absolutely pointless.";
+    }
+
+    else {
+        document.getElementById("User_Zodiac").innerHTML = "Sorry, I didn't understand.  Please enter your birth month.";
     }
 }
+
+function capitalize(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
