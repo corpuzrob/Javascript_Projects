@@ -5,3 +5,10 @@ function full_Sentence()    {
     var whole_sentence = part_1.concat(part_2, part_3);
     document.getElementById("Concatenate").innerHTML = whole_sentence;
 }
+
+let text = 
+function text_Search()  {
+    var str = "ham"
+    var result = str.search(a)
+    document.getElementById("Green_Eggs_and_Ham").innerHTML = result;
+}
