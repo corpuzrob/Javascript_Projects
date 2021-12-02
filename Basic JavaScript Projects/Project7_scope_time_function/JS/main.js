@@ -15,6 +15,7 @@ function Tax_Bracket_Function() {
     document.getElementById("Tax_Bracket_Status").innerHTML = "At an income of $" + User_Income + ", " + Tax_Bracket;
 }
 
+// if assignment (note that before I got to step 151, the else assignment, I had already researched and added else if and else statements here, so I'm going to assume that this can count as my else and else if assignments as well.  I did however re-write and run the examples provided in Example2.js just to practice them.  Please let me know if this is not ok.  Thanks.)
 function Horoscope() {
 
     var User_Birth_Month = document.getElementById("User_Birth_Month").value.toLowerCase();
