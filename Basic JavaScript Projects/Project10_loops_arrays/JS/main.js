@@ -33,7 +33,7 @@ function cat_pics() {
     Cat_Picture[1] = "playing";
     Cat_Picture[2] = "eating";
     Cat_Picture[3] = "purring";
-    document.getElementById("Cat").innerHTML = "In this picture, the cat is" + Cat_Picture[2] + ".";
+    document.getElementById("Cat").innerHTML = "In this picture, the cat is " + Cat_Picture[2] + ".";
 
 }
 
@@ -66,6 +66,13 @@ function Get_Weather()  {
         "On " + Day_of_the_Week[5]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>" +
         "On " + Day_of_the_Week[6]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>";
 
+    function constant_function()   {
+        const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
+        Musical_Instrument.color = "blue";
+        Musical_Instrument.price = "$900";
+        document.getElementById("Constant").innerHTML = "The cost of the " + 
+            Musical_Instrument.type + " was " + Musical_Instrument.price;
+    }
 }
 
 
