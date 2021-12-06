@@ -70,7 +70,7 @@ function Get_Weather()  {
         "On " + Day_of_the_Week[3]+ ", the weather will be " + Weather_Forecast[3] + "." + "<br>" +
         "On " + Day_of_the_Week[4]+ ", the weather will be " + Weather_Forecast[4] + "." + "<br>" +
         "On " + Day_of_the_Week[5]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>" +
-        "On " + Day_of_the_Week[6]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>";
+        "On " + Day_of_the_Week[6]+ ", the weather will be " + Weather_Forecast[6] + "." + "<br>";
 }
 
 // The next two sections demonstrate a constant:
