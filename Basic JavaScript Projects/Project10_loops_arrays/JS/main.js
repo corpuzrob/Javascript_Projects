@@ -1,3 +1,8 @@
+function Greeting_Function(name) {
+    return "Hey there " + name + ", here are some buttons to click on:";
+}
+document.getElementById("Greeting_Name").innerHTML = Greeting_Function("friend");
+
 // Loop function
 function count_down_from_ten() {
     var Digit = "";
@@ -7,8 +12,6 @@ function count_down_from_ten() {
         X = X - 1;
     }
     document.getElementById("Loop").innerHTML = Digit;
-
-
 }
 
 let text = "pneumonoultramicroscopicsilicovolcanoconiosis";
@@ -65,14 +68,46 @@ function Get_Weather()  {
         "On " + Day_of_the_Week[4]+ ", the weather will be " + Weather_Forecast[4] + "." + "<br>" +
         "On " + Day_of_the_Week[5]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>" +
         "On " + Day_of_the_Week[6]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>";
+}
 
-    function constant_function()   {
-        const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
-        Musical_Instrument.color = "blue";
-        Musical_Instrument.price = "$900";
-        document.getElementById("Constant").innerHTML = "The cost of the " + 
-            Musical_Instrument.type + " was " + Musical_Instrument.price;
+function constant_function() {
+
+    const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
+    Musical_Instrument.color = "blue";
+    Musical_Instrument.price = "$900";
+    document.getElementById("Constant").innerHTML = "The cost of the " + 
+        Musical_Instrument.type + " was " + Musical_Instrument.price;
+ }
+
+ function Food_Function() {
+
+    const Food_Function = {name:"apple", type:"fruit", healthiness:"healthy"};
+    Food_Function.name = "broccoli";
+    Food_Function.type = "vegetable";
+    Food_Function.healthiness = "healthy";
+    Food_Function.price_per_pound = 2.00;
+    document.getElementById("Food_Constant").innerHTML = "The " + 
+        Food_Function.type + " " + Food_Function.name + " is considered " + Food_Function.healthiness + " and it costs $" + Food_Function.price_per_pound + " per pound.";
+}
+
+function Let_Function() {
+    var Y = 42;
+    document.write("This uses \"var\" within a block:<br>")
+    document.write(Y);
+    {
+        var Y = 24;
+        document.write("<br>" + Y);
     }
+    document.write("<br>" + Y + "<br><br>");
+
+    var Y = 42;
+    document.write("This uses \"let\" within a block:<br>")
+    document.write(Y);
+    {
+        let Y = 24;
+        document.write("<br>" + Y);
+    }
+    document.write("<br>" + Y);
 }
 
 
