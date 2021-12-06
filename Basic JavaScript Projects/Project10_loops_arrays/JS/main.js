@@ -1,9 +1,10 @@
+//This demonstrates "return":
 function Greeting_Function(name) {
     return "Hey there " + name + ", here are some buttons to click on:";
 }
 document.getElementById("Greeting_Name").innerHTML = Greeting_Function("friend");
 
-// Loop function
+// This demonstrates a while loop:
 function count_down_from_ten() {
     var Digit = "";
     var X = 10;
@@ -13,13 +14,15 @@ function count_down_from_ten() {
     }
     document.getElementById("Loop").innerHTML = Digit;
 }
+// This demonstrates the "length" property
+function length_function()  {
+    let text = "pneumonoultramicroscopicsilicovolcanoconiosis";
+    let length = text.length;
+    // console.log(length);
+    document.getElementById("length_longest_word").innerHTML = "Pneumonoultramicroscopicsilicovolcanoconiosis is " + length + " letters long.";
+}
 
-let text = "pneumonoultramicroscopicsilicovolcanoconiosis";
-let length = text.length;
-console.log(length);
-// Test of alert
-// alert(document.getElementById("p1").innerHTML);
-
+// This demonstrates a for loop:
 var Instruments = ["Guiter", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
 var Content = "";
 var Y;
@@ -30,6 +33,7 @@ function for_Loop() {
     document.getElementById("List_of_Instruments").innerHTML = Content;
 }
 
+// The next two sections demonstrate arrays:
 function cat_pics() {
     var Cat_Picture = {};
     Cat_Picture[0] = "sleeping";
@@ -37,7 +41,6 @@ function cat_pics() {
     Cat_Picture[2] = "eating";
     Cat_Picture[3] = "purring";
     document.getElementById("Cat").innerHTML = "In this picture, the cat is " + Cat_Picture[2] + ".";
-
 }
 
 function Get_Weather()  {
@@ -70,6 +73,7 @@ function Get_Weather()  {
         "On " + Day_of_the_Week[6]+ ", the weather will be " + Weather_Forecast[5] + "." + "<br>";
 }
 
+// The next two sections demonstrate a constant:
 function constant_function() {
 
     const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
@@ -90,6 +94,37 @@ function constant_function() {
         Food_Function.type + " " + Food_Function.name + " is considered " + Food_Function.healthiness + " and it costs $" + Food_Function.price_per_pound + " per pound.";
 }
 
+// This demonstrates the "let" keyword and the return statement:
+function Donor_Function()   {
+    let donor = {
+        name: "Joe Schmoe",
+        join_date: "2013-08-25",
+        recent_donation_date: "2020-11-03",
+        recent_donation_amount: "4000",
+        total_donated: "32000",
+        description : function()    {
+            return this.name + " joined on " + this.join_date + 
+            ". <br><br> Their most recent donation was $" + 
+            this.recent_donation_amount + ". <br><br>" + 
+            this.name + " has donated a total of $" + 
+            this.total_donated + ". <br>";
+        }
+    };
+    document.getElementById("Donor_Object").innerHTML = donor.description();
+}
+
+// This demonstrates the "continue" keyword:
+function continue_function()    {
+    text = ("<br>")
+    for (let a = 0; a < 10; a++)    {
+        if (a === 3)    { continue; }
+        text += "The number is " + a + "<br>";
+        document.getElementById("continue_test").innerHTML = text;
+        // "a is equal to: " + a;
+    }
+}
+
+// This demonstrates scope and the "let" keyword:
 function Let_Function() {
     var Y = 42;
     document.write("This uses \"var\" within a block:<br>")
@@ -107,8 +142,9 @@ function Let_Function() {
         let Y = 24;
         document.write("<br>" + Y);
     }
-    document.write("<br>" + Y);
+    document.write("<br>" + Y + "<br>");
 }
 
+// This was a test of an alert
+// alert(document.getElementById("p1").innerHTML);
 
-// Questions: 1) var Y, 
