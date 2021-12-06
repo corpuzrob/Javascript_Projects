@@ -79,8 +79,8 @@ function constant_function() {
     const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
     Musical_Instrument.color = "blue";
     Musical_Instrument.price = "$900";
-    document.getElementById("Constant").innerHTML = "The cost of the " + 
-        Musical_Instrument.type + " was " + Musical_Instrument.price;
+    document.getElementById("Constant").innerHTML = "The cost of a " + Musical_Instrument.brand + " " +
+        Musical_Instrument.type + " is approximately " + Musical_Instrument.price + ".";
  }
 
  function Food_Function() {
@@ -91,7 +91,7 @@ function constant_function() {
     Food_Function.healthiness = "healthy";
     Food_Function.price_per_pound = 2.00;
     document.getElementById("Food_Constant").innerHTML = "The " + 
-        Food_Function.type + " " + Food_Function.name + " is considered " + Food_Function.healthiness + " and it costs $" + Food_Function.price_per_pound + " per pound.";
+        Food_Function.type + " known as " + Food_Function.name + " is considered " + Food_Function.healthiness + " and it costs $" + Food_Function.price_per_pound + " per pound.";
 }
 
 // This demonstrates the "let" keyword and the return statement:
