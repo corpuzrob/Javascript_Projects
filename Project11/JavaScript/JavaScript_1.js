@@ -1,3 +1,4 @@
+/* Lets user choose from a list and prints an output specific to that choice */
 function Drink_Function()   {
     var Drink_Output;
     var Drinks = document.getElementById("Drink_Input").value;
@@ -39,16 +40,27 @@ function Drink_Function()   {
     }
     document.getElementById("Output").innerHTML = Drink_Output;
 }
-
+/* // This is a test of the "getElementsByClassName" method. */
 function Class_Name_Function()    {
     var A = document.getElementsByClassName("Click");
-    A[O].innerHTML = "The text has changed!";
+    A[0].innerHTML = "The text has changed!";
 }
 
-{/* <script>
-    var c = document.getElementById("Canvas_Test");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0,0);
-    ctx.lineTo(200, 100);
-    ctx.stroke();
-</script> */}
+/* // Draw lines from corner to corner on a box/canvas */
+var c = document.getElementById("Canvas_Test");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(500, 250);
+ctx.stroke();
+
+ctx.moveTo(0,250);
+ctx.lineTo(500, 0);
+ctx.stroke();
+
+/* This creates a gradient that goes from black to white, left to right, and top to bottom*/
+var grd = ctx.createLinearGradient(0, 0, 400, 400);
+grd.addColorStop(0, "black");
+grd.addColorStop(1, "white");
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 500, 250);
