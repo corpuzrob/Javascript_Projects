@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basic HTML Template</title>
+        <meta charset="utf-8">
+        <script src="JavaScript/Javascript_3.js" defer></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div>
+                <h1>Data Attributes</h1>
+            </div>
+
+            <div class="squares">
+                <ol>
+                    <li data-family_relation ="father">Eddard</li>
+                    <li data-family_relation ="Mother">Catelyn</li>
+                    <li data-family_relation ="sister">Sansa</li>
+                </ol>            
+            </div>
+
+            <div class="squares">
+                <h1>Characters</h1>
+                <h3>Click on a "Song of Ice and Fire" character to see which family house they belong to!</h3>
+                    <ul>
+                        <li onclick="displayType(this)" id="Lannister"
+                            data-character-type="Lannister">Tyrion</li>
+                        <li onclick="displayType(this)" id="Stark"
+                            data-character-type="Stark">Arya</li>   
+                        <li onclick="displayType(this)" id="Martell"
+                            data-character-type="Martell">Oberyn</li>  
+                        <li onclick="displayType(this)" id="Greyjoy"
+                            data-character-type="Greyjoy">Theon</li>               
+                    </ul>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
