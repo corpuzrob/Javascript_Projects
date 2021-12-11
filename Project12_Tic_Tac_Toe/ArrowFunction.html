@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arrow Function, Some() Method</title>
+        <meta charset="utf-8">
+        <!-- <script src="js/tictactoe.js" defer></script> -->
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Arrow Function, Some() Method</h1>
+
+            <p id="displayAge" onclick="ageFunction()">Click here to check an age.</p>
+
+            <!-- A simple function -->
+            <script>
+                function greeting1(name)    {
+
+                    console.log('Hello ' + name);
+                }
+
+                greeting1('Joe Schmoe');
+                greeting1('Jane Schmoe');
+            </script>
+
+            <!-- A simple function using an arrow -->
+            <script>
+                greeting2 = (name) => console.log('Hey there ' + name);
+
+                greeting2('Marty McFly');
+                greeting2('Emmett Brown');
+            </script>
+
+            <script>
+                var ages = [2, 10, 18, 20, 13, 15, 30];
+
+                //Using the arrow function to pass in a parameter of age
+                checkAge = (age) => age >= 18;
+
+                function ageFunction()   {
+                    //Use the .some() to iterate through the array of ages and display the result.
+                    document.getElementById('displayAge').innerHTML = ages.some(checkAge);
+                }
+
+                // ageFunction();
+            </script>
+
+
+
+            <!-- Arrow function tests: 
+
+            myFunction = function() {
+                return "This is my function";
+            }
+
+            myFunction = () => "This is my function";  
+            
+            -->
+
+
+            <!-- 
+            <p id="displayCamera" onmouseover="camera()">Click here.</p>
+            <p id="Hello" onclick="Greeting()">Click here for a greeting.</p>
+            <p id="arrow_test" onclick="arrow_function_test()">Test of another arrow function</p>
+ 
+                            
+            <script>
+                var camera;
+                camera = (val) => "These are a couple of camera brands: " + val;
+                document.getElementById('displayCamera').innerHTML = camera("Canon, Nikon, Sony, FujiFilm, Olympus, and Pentax");
+            </script>
+
+            <script>
+                function Greeting() {
+                    document.getElementById('Hello').innerHTML = "Hi, how are you?";
+                }
+            </script>
+
+            <script>
+                function arrow_function_test()  {
+                    return "This is my arrow function."
+                    document.getElementById('arrow_test').innerHTML = "Testy test";
+                }
+            </script> 
+            -->
+
+
+        </div>
+
+    </body>
+</html>
