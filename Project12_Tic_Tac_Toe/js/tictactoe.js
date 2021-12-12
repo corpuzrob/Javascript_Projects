@@ -16,8 +16,66 @@ function placeXOrO(squareNumber)    {
             // If activePlayer is equal to 'X', the x.png is placed in HTML.
             select.style.backgroundImage = 'url("images/x.png")';
             // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
+        }   else{
+                // If activePlayer is equal to 'O', the o.png is placed in HTML.
+                select.style.backgroundImage = 'url("images/o.png")';
+        }
+        // squareNumber and activePlayer are concatenated together and added to array.
+        selectedSquares.push(squareNumber + activePlayer);
+        // This calls a function to check for any win conditions.
+        checkWinConditions();
+        // This condition is for changing the active player.
+        if (activePlayer === 'X')   {
+            // If active player is 'X' change it to 'O'.
+            activePlayer = 'O';
+        // If active player is anything other than 'X'.
+        } else  {
+            // Change the activePlayer to 'X'
+            activePlayer = 'X';
+        }
+
+        // This function plays placement sound.
+        audio('./media/place.mp3');
+        // This condition checks to see if it is computers turn.
+        if(activePlayer === 'O')    {
+            // This function disables clicking for computer choice.
+            disableClick();
+            // This function waits 1 second before computer places image and enables click.
+            setTimeout(function () { computersTurn(); }, 1000)
+        }
+        // Returning true is needed for our computersTurn() function to work.
+        return true;
+    }
+
+    // This function results in a random square being selected.
+    function computersTurn()    {
+        // This boolean is needed for our while loop.
+        let success = false;
+        // This variable stores a random number 0-8.
+        let pickASquare;
+        // This condition allows our while loop to keep trying if a square is selected already.
+        while(!success) {
+            // A random number between 0 and 8 is selected.
+            pickASquare = String(Math.floor(Math.random() * 9));
+            // If the random number evaluated returns true, the square hasn't been selected yet.
+            if (placeXOrO(pickASquare)) {
+                // This line calls the function.
+                placeXOrO(pickASquare);
+                //This changes our boolean and ends the loop.
+                success = true;
+            };
         }
     }
+}
+
+// This function parses the selectedSquares array to search for win conditions.
+// drawWinLine function is called to draw line if condition is met.
+function checkWinConditions()   {
+    // X O, 1, 2 condition.
+    if      (arrayIncludes('OX', '1X', '2X'))   { drawWinLine(50, 100, 558, 100) }
+    // X 3, 4, 5 condition.
+    else if (arrayIncludes('3X', '4X', '5X'))   { drawWinLine(50, 304, 558, 304) }
+    // x 6, 7, 8 condition.
 }
 
 /* 
