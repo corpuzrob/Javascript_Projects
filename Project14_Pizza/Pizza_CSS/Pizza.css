@@ -1,0 +1,98 @@
+The n
+
+h1     {
+    font-family: 'GFS Neohellenic', sans-serif;
+    color:rgb(130, 151, 219);
+    /* text-align:center; */
+}
+
+h2     {
+    font-family: 'GFS Neohellenic', sans-serif;
+    color:rgb(130, 151, 219);
+    /* text-align:center; */
+}
+
+h3     {
+    font-family: 'GFS Neohellenic', sans-serif;
+    color:rgb(130, 151, 219);
+}
+
+body   {
+    background-color: rgb(245, 240, 235);
+}
+
+div     {
+    font-family: 'GFS Didot', serif;
+    color:rgb(130, 151, 219);
+}
+
+#menuBG {
+    width:600px;
+    height:470px;
+    margin:10px auto;
+}
+
+#frmMenu {
+    width:600px;
+    height:200px;
+}   
+
+#totalPrice {
+    width:200px;
+    height:190px;
+    margin:0 auto;
+    float:right;
+}
+
+.left   {
+    width:200px;
+    height:200px;
+    float:left;
+}
+
+/* This was necessary to size and position the new veggie toppings section: */
+
+.center  {
+    width:200px;
+    height:200px;
+    float:left;
+}
+
+.right   {
+    width:200px;
+    height:200px;
+    float:right;
+}
+
+#showText   {
+    width:200px;
+    height:190px;
+    margin:0px auto;
+    float:left;
+}
+
+#cart   {
+    top:0;margin:0px auto;
+    width:400px;
+    height:200px;
+}
+
+#btnOrder   {
+    margin:10px 0px 0px 100px;
+    width:100px;
+    height:40px;
+    color:rgb(245, 240, 235);
+    background-color:rgb(130, 151, 219);
+
+}
+
+/* I tried to change the color of the checked radios and boxes, but I was only able to change them to grayscale */
+
+input[type='checkbox']:checked {
+    -webkit-filter: grayscale(100%);
+}
+
+input[type='radio']:checked {
+    -webkit-filter: grayscale(100%);
+}
+
