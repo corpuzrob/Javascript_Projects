@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Test</title>
+        <meta charset="utf-8">
+        <script src=https://code.jquery.com/jquery-3.6.0.js>
+
+        </script>
+    </head>
+    <body>
+
+        <!-- <div class="container">
+            <div>
+                <h1>jQuery Test</h1>
+            </div>
+
+            <div class="squares">
+                <p>Box 1</p>
+            </div> -->
+            
+        <script>
+            $(document).ready(function()    {
+                $("html").append(
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                    <h1>Basic jQuery</h1>\
+                                    <p id='1'>Paragraph 1</p>\
+                                    <p id='2'>Paragraph 2</p>\
+                                    <p id='3'>Paragraph 3</p>\
+                                    <p>Paragraph 4</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                );
+                $("#2").css({"color":"red"});
+                $("#3").click(function()    {
+                    $('h1').hide();
+                });
+
+                // Event setup using a convenience method
+                // $( "p" ).click(function() {
+                //     console.log( "You clicked a paragraph!" );
+                // });
+
+                // Equivalent event setup using the `.on()` method
+                $( "p" ).on( "click", function() {
+                    console.log( "click" );
+                });
+
+                // // Instantaneously hide all paragraphs
+                // $( "p" ).hide();
+                
+                // // Instantaneously show all divs that have the hidden style class
+                // $( "div.hidden" ).show();
+
+                // Slowly hide all paragraphs
+                $( "p" ).hide( "slow" );
+                
+                // Quickly show all paragraphs
+                $( "p" ).show( "fast" );
+
+                // Slowly hide all paragraphs again
+                $( "p" ).hide( 3000 );
+
+                // Set sloooow as 4 seconds in length
+                $.fx.speeds.sloooow = 4000;
+                
+                // Very slowly show all paragraphs again
+                $( "p" ).show( "sloooow" );
+
+                // // Hide all paragraphs using a fade out animation over 1.5 seconds
+                // $( "p" ).fadeOut( 1500 );
+            
+
+                // // Show all hidden divs using a fade in animation over 0.75 seconds
+                // $( "div.hidden" ).fadeIn( 750 );
+
+
+                // // Instantaneously toggle the display of all paragraphs
+                // $( "p" ).toggle();
+                
+                // // Slowly toggle the display of all images
+                // $( "img" ).toggle( "slow" );
+                
+                // // Toggle the display of all divs over 1.8 seconds
+                // $( "div" ).toggle( 1800 );
+            });
+        </script>
+        <!-- <script>$(function() { alert('hello') });</script> -->
+
+        <!-- Event setup using a convenience method -->
+        <script>
+            $( "p" ).click(function() {
+                console.log( "You clicked a paragraph!" );
+            });
+
+            // Equivalent event setup using the `.on()` method
+            $( "p" ).on( "click", function() {
+                console.log( "click" );
+            });
+        </script>
+
+        </div>
+
+    </body>
+</html>
