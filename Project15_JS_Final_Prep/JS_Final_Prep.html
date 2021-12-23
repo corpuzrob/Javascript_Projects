@@ -12,5 +12,32 @@
         <h1>Deep Thoughts</h1>
         <hr>
         <p>Maybe plants are really farming us, giving us oxygen until we eventually expire and turn into mulch which they can consume</p>
+    
+        <p id="myCat"></p>
+        <p id="myOtherCat"></p>
+        <p id="myCatLocal"></p>
+
+        <script>
+            /* JavaScript dictionary object*/
+            var cat = {name: "Ziablik", breed: "Thai", color: "Brown and Beige"};
+            /* Convert JS objects to string format */
+            var JSONstring = JSON.stringify(cat);
+            document.getElementById("myCat").innerHTML = JSONstring;
+        </script>
+
+        <script>
+            /* This is a JSON string variable */
+            var cat = '{"name": "Bridgette", "breed": "Tortoiseshell", "color": "Black, Orange, White"}';
+            /* Convert JSON strings to JS objects */
+            var JSONstring = JSON.parse(cat);
+            document.getElementById("myOtherCat").innerHTML = JSONstring.name + " the " + JSONstring.breed;
+        </script>    
+        
+        <script>
+            /* Set the data as a key/value pair to be saved locally in your broswer */
+            localStorage.setItem("Name", "Ziablik");
+            /* Then use the key "Name" to return it's value "Ziablik" */
+            document.getElementById("myCatLocal").innerHTML = localStorage.getItem("Name");
+        </script>
     </body>
 </html>
