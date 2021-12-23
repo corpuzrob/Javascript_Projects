@@ -61,3 +61,8 @@ function getTopping(runningTotal,text1) {
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+
         runningTotal+".00"+"</strong></h3>";
 };
+
+// Removes fade-out class once page is loaded
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+});

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p id="XML_Example1"></p>
+
+    <script>
+        var XML_Parser, XML_Document;
+
+        // Creates a text string
+
+        var Customer = 
+
+                "<customer>" +
+                "<number>3021</number>" +
+                "<name>Alan Smithee</name>" +
+                "<age>35</age>" +
+                "</customer>";
+
+        // This was an experiement:
+        // var Movies = 
+
+                // "<movie1>" +
+                // "<title>Schindler\'s List</title>" +
+                // "<director>Steven Spielberg</director>" +
+                // "<starring>Liam Neeson</starring>" +
+                // "<year>1993</year>" +
+                // "</movie1>";
+
+                // "<movie2>" +
+                // "<title>Fight Club</title>" +
+                // "<director>David Fincher</director>" +
+                // "<starring>Edward Norton</starring>" +
+                // "<year>1999</year>" +
+                // "</movie2>";
+
+        // Creates an XML DOM parser
+        XML_Parser = new DOMParser();
+
+        // Creates a new XML DOM object using the text string
+        XML_Document = XML_Parser.parseFromString(Customer,"text/xml");
+
+        document.getElementById("XML_Example1").innerHTML =
+        XML_Document.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+
+    </script>
+
+</body>
+</html>
