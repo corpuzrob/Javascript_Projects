@@ -39,5 +39,13 @@
             /* Then use the key "Name" to return it's value "Ziablik" */
             document.getElementById("myCatLocal").innerHTML = localStorage.getItem("Name");
         </script>
+
+        <p id="example" ondblclick="myFunction()">Double click this paragraph.</p>
+
+        <script>
+            function myFunction()  {
+                document.getElementById("example").style.color= "red";
+            }
+        </script>
     </body>
 </html>

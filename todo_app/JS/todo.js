@@ -37,7 +37,7 @@ function show() {
     var html = '<ul>';
     /* This displays a task to the list in the order that it is inputed */
     for (var i = 0; i < todos.length; i++)  {
-        /* this also displays the task as a list and creates tht button with the 'x" */
+        /* this also displays the task as a list and creates the button with the 'x" */
         html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
 
     };
@@ -45,8 +45,29 @@ function show() {
     /* This displays the task as a list */
     document.getElementById('todos').innerHTML = html;
 
+    /* This tells the browser how to display the todo array after an item has been removed */
+    var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i < buttons.length; i++)  {
+        buttons[i].addEventListener('click', remove);
+    };
+
 }
+
 /* This displays the inputed task when the 'Add Item' button is clicked */
 document.getElementById('add').addEventListener('click', add);
 /* This will keep the inputs displayed permanently on the screen */
 show();
+
+/* This creates the functionality of removing a todo item from the array */
+function remove()  {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    /* This looks in the show() how to display a removed item on the screen */
+    show();
+
+    return false;
+}
+
+
